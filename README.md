@@ -10,7 +10,7 @@ bench.cpp, invoked by `make bench`, is a simple benchmark.
 An example output is (scale: sec.):
 
     $ make bench
-    g++ -lboost_unit_test_framework  -DNDEBUG -O2 -Wall -Wextra bench.cpp -o bench
+    g++  -DNDEBUG -O2 -Wall -Wextra bench.cpp -o bench
     ./bench
     int
     size    100000
@@ -19,13 +19,13 @@ An example output is (scale: sec.):
     timsort          0.93
     double
     size	100000
-    std::sort        0.64
+    std::sort        0.63
     std::stable_sort 0.78
-    timsort          1
+    timsort          1.01
     boost::rational
     size	100000
-    std::sort        5.5
-    std::stable_sort 4.32
-    timsort          6.02
+    std::sort        5.31
+    std::stable_sort 4.3
+    timsort          6.03
 
 Looks not so great...(´･_･`)
