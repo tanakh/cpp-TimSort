@@ -1,3 +1,4 @@
+#include <iomanip>
 #include <vector>
 #include <algorithm>
 #include <iostream>
@@ -28,6 +29,7 @@ void bench(int const size) {
         boost::timer t;
 
         for(int i = 0; i < 100; ++i) {
+            std::copy(a.begin(), a.end(), b.begin());
             std::sort(b.begin(), b.end(), lt);
         }
 
@@ -40,6 +42,7 @@ void bench(int const size) {
         boost::timer t;
 
         for(int i = 0; i < 100; ++i) {
+            std::copy(a.begin(), a.end(), b.begin());
             std::stable_sort(b.begin(), b.end(), lt);
         }
 
@@ -52,6 +55,7 @@ void bench(int const size) {
         boost::timer t;
 
         for(int i = 0; i < 100; ++i) {
+            std::copy(a.begin(), a.end(), b.begin());
             timsort(b.begin(), b.end(), lt);
         }
 
